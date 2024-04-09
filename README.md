@@ -30,14 +30,6 @@ Uploaded to Github
 # Future Features to Implement:
 - Dynamic addition of new Iris types
 - Implement a cleaner UI
-# NOTE:
-The readability on this is pretty rough, this is intentional, 
-as I was more focused on getting a working prototype than making 
-it run as best it can.
-
-I used the knowledge of C++ that I best was familar with to create this, 
-but I plan on refactoring this code later on.
-Project is currently over 500 lines long.
 
 
 
