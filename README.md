@@ -41,10 +41,13 @@ Uploaded to Github
 - Uses the data from the famous Iris flower dataset to predict the likeihood of what type of flower the user may have
 - Provides an accurate prediction of the user's flower type
 - Dynamic allocation of memory for data structures
-
-# Future Features to Implement:
 - Dynamic addition of new Iris types
+- 
+# Future Features to Implement:
 - Implement a cleaner UI
 
+# Known Bugs in V-1.00:
+- Error is suffered when trying to input two flowers in one session.
+- Number of iris flowers becomes incorrect when trying to input two flowers in one session.
 
 
