@@ -31,7 +31,6 @@ This is the a newer version of the first code I made. This one uses vectors to i
 
 using namespace std;
 
-const long int PI = 3.14159265359;
 
 int main()
 {
@@ -62,12 +61,13 @@ int main()
 
     //Manages input from user
     vector<vector<double>> input;
+
     
-    Flower1.gatherdata(datasetinfo, numberoftype_Set, numberoftype_Ver, numberoftype_Vir, records);
 
 MENU:  do {
-
+    Flower1.gatherdata(datasetinfo, numberoftype_Set, numberoftype_Ver, numberoftype_Vir, records);
     choice = 0;
+
     cout << "Welcome to Israel's Iris Flower Predictor!" << endl;
     cout << "Number of detected records from CSV file: " << records << endl;
     cout << "Current number of Setosas: " << numberoftype_Set << endl;
@@ -84,8 +84,8 @@ MENU:  do {
 
         //Used for later in the program!
         double results[3];
-        
-        Flower1.gatherinput(input);
+        string userarr[5];
+        Flower1.gatherinput(input, userarr);
        
         //Setosa Values running
         Flower1.samplemean(datasetinfo, iris_s, numberoftype_Set, records, input); 
@@ -151,39 +151,65 @@ MENU:  do {
         if (results[0] >= results[1] && results[0] >= results[2]) {
             cout << "The program has generated these results: " << endl;
 
-            cout << results[0] << " is the how condifdent the program is that your entered flower is a Setosa." << endl;
-            cout << results[1] << " is the how condifdent the program is that your entered flower is a Versicolor." << endl;
-            cout << results[2] << " is the how condifdent the program is that your entered flower is a Virginica." << endl;
+            cout << results[0] << " is the how confident the program is that your entered flower is a Setosa." << endl;
+            cout << results[1] << " is the how confident the program is that your entered flower is a Versicolor." << endl;
+            cout << results[2] << " is the how confident the program is that your entered flower is a Virginica." << endl;
+            userarr[4] = "Iris-setosa";
 
             cout << "Thus, your flower is most likely a Setosa!" << endl;
         }
         else if (results[1] >= results[0] && results[1] >= results[2]) {
             cout << "The program has generated these results: " << endl;
 
-            cout << results[0] << " is the how condifdent the program is that your entered flower is a Setosa." << endl;
-            cout << results[1] << " is the how condifdent the program is that your entered flower is a Versicolor." << endl;
-            cout << results[2] << " is the how condifdent the program is that your entered flower is a Virginica." << endl;
+            cout << results[0] << " is the how confident the program is that your entered flower is a Setosa." << endl;
+            cout << results[1] << " is the how confident the program is that your entered flower is a Versicolor." << endl;
+            cout << results[2] << " is the how confident the program is that your entered flower is a Virginica." << endl;
+            userarr[4] = "Iris-versicolor";
 
             cout << "Thus, your flower is most likely a Versicolor!" << endl;
         }
         else {
             cout << "The program has generated these results: " << endl;
 
-            cout << results[0] << " is the how condifdent the program is that your entered flower is a Setosa." << endl;
-            cout << results[1] << " is the how condifdent the program is that your entered flower is a Versicolor." << endl;
-            cout << results[2] << " is the how condifdent the program is that your entered flower is a Virginica." << endl;
+            cout << results[0] << " is the how confident the program is that your entered flower is a Setosa." << endl;
+            cout << results[1] << " is the how confident the program is that your entered flower is a Versicolor." << endl;
+            cout << results[2] << " is the how confident the program is that your entered flower is a Virginica." << endl;
+            userarr[4] = "Iris-virginica";
 
             cout << "Thus, your flower is most likely a Virginica!" << endl;
         }
 
         cout << endl;
+
+        cout << "Would you like to add your new flower to your dataset?" << endl;
+        cout << "Please enter 1 to add the flower, or anything else to continue!" << endl;
+        cout << "Please note; Once a flower has been added, the next flower you enter will be influnced by the new entry!" << endl;
+
+        int choice2 = 0;
+
+        cin >> choice2;
+
+        cin.ignore();
+
+        cout << userarr[4] << endl;
+
+        if (choice2 == 1) {
+            
+            Flower1.senddata(userarr,records);
+            cout << "Flower was successfully added to the dataset!" << endl;
+            datasetinfo.erase(datasetinfo.begin() + 1, datasetinfo.end());
+            datasetinfo[0].clear();
+        }
+        else {
+            cout << "Flower was NOT added to the dataset!" << endl;
+            datasetinfo.erase(datasetinfo.begin() + 1,datasetinfo.end());
+            datasetinfo[0].clear();
+        }
+
         goto MENU;
     }
 } while (choice == 1);
 
 system("PAUSE");
 }
-
-
-
 
