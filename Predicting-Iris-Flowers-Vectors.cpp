@@ -1,13 +1,12 @@
 /*
 Israel Showell
-Start Date: 4-4-2024
-End Date: --2024
+Start Date: 3-29-2024
+End Date: 4-9-2024
 Project:
 Predicting Iris Flowers using Vectors
 
-Version: 1.0.0
+Version: 1.1.0
 
-//Working on converting to Vectors
 
 Description:
 This program exercises Machine Learning by taking in values for a new Iris flower.
@@ -15,11 +14,14 @@ It uses data from the famous iris dataset, and then processes the new input.
 Afterwards, it will show how confidient it is in its prediction, and then add the new flower in as the
 type it is most sure that it is.
 
+This program uses Naïve Bayes and Statistical Modeling to make its predictions.
+
 NOTE:
 This is the a newer version of the first code I made. This one uses vectors to increase readability.
 */
 
 
+//Libraries used to provide functionalilty for the program
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -27,8 +29,11 @@ This is the a newer version of the first code I made. This one uses vectors to i
 #include <math.h>
 #include <cmath>
 #include <vector>
+
+//My custom header file
 #include "Prediction.h"
 
+//This is techinally bad practice, but I didn't want to type std:: on each line 
 using namespace std;
 
 
@@ -41,6 +46,7 @@ int main()
     int records = 0;
     int choice = 0;
 
+    //Will hold the number of each flower type from the dataset
     double numberoftype_Set = 0;
     double numberoftype_Ver = 0;
     double numberoftype_Vir = 0;
@@ -64,10 +70,12 @@ int main()
 
     
 
-MENU:  do {
+//MENU:  do {
+    //Calls the gatherdata member function and passese the proper values
     Flower1.gatherdata(datasetinfo, numberoftype_Set, numberoftype_Ver, numberoftype_Vir, records);
     choice = 0;
 
+    //Provides the prompts for the user
     cout << "Welcome to Israel's Iris Flower Predictor!" << endl;
     cout << "Number of detected records from CSV file: " << records << endl;
     cout << "Current number of Setosas: " << numberoftype_Set << endl;
@@ -178,10 +186,10 @@ MENU:  do {
 
             cout << "Thus, your flower is most likely a Virginica!" << endl;
         }
+        
 
-        cout << endl;
-
-        cout << "Would you like to add your new flower to your dataset?" << endl;
+        //cout << "Would you like to add your new flower to your dataset?" << endl;
+        
         cout << "Please enter 1 to add the flower, or anything else to continue!" << endl;
         cout << "Please note; Once a flower has been added, the next flower you enter will be influnced by the new entry!" << endl;
 
@@ -206,10 +214,10 @@ MENU:  do {
             datasetinfo[0].clear();
         }
 
-        goto MENU;
+        //goto MENU;
     }
-} while (choice == 1);
-
+//} while (choice == 1);
+    cout << "Program End" << endl;
 system("PAUSE");
 }
 
