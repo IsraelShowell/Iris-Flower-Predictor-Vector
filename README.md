@@ -36,11 +36,11 @@ https://github.com/IsraelShowell/Iris-Flower-Predictor
 # Version History:
 
 # V-1.00: (3-29-24 - 4-9-24)
-Initial Version
+Initial Version <br>
 Uploaded to Github
 
 # V-1.10: (4-12-24)
-Users can now only input one flower per session
+Users can now only input one flower per session <br>
 Added more comments explaining the logic and code
 
 # Current Features as of V-1.10:
@@ -49,7 +49,7 @@ Added more comments explaining the logic and code
 - Provides an accurate prediction of the user's flower type
 - Dynamic allocation of memory for data structures
 - Dynamic addition of new Iris types
-- 
+
 
 # Future Features to Implement:
 - Implement a cleaner UI
@@ -66,8 +66,8 @@ Note: I had ChatGPT give me a clearer recap on the logic I used.
 Statistical modeling in the context of the functions mentioned involve various statistical methods and calculations, each serving a distinct purpose within the broader framework of understanding and predicting data behavior. Here's a breakdown of each function and the statistical modeling used in them:
 
 # Sample Mean:
-
 The sample mean is the average of a set of observations. In statistical modeling, it's used as an estimator for the population mean. It is calculated as the sum of all observations divided by the number of observations. The sample mean is crucial for setting the basis of various other statistical measures and models, serving as a central location measure.
+
 # Sample Variance:
 
 Sample variance measures the spread of data points around the mean. It is calculated by summing the squared differences of each observation from the mean and then dividing by the number of observations minus one,
