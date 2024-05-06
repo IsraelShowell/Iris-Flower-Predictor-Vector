@@ -48,7 +48,7 @@ Formatted the confidence to come out as a percentage <br>
 Added more comments explaining the logic and code <br>
 Created a PowerPoint that briefly explains the program
 
-# Current Features as of V-1.10:
+# Current Features as of V-1.20:
 - Takes 4 variable values from the user about an Iris flower type 
 - Uses the data from the famous Iris flower dataset to predict the likeihood of what type of flower the user may have
 - Provides an accurate prediction of the user's flower type
