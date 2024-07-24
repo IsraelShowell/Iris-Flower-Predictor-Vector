@@ -2,7 +2,7 @@
 # Start Date: 3-29-2024
 # End Date: 4-9-2024
 # Project: Iris Flowers Predictor
-# Version: 1.2.0
+# Version: 1.2.1
 
 # Description:
 This is a medium-sized C++ program that will predict what kind of Iris Flower you have. 
@@ -35,23 +35,23 @@ https://github.com/IsraelShowell/Iris-Flower-Predictor
 
 # Version History:
 
-# V-1.00: (3-29-24 - 4-9-24)
+# V-1.0.0: (3-29-24 - 4-9-24)
 Initial Version <br>
 Uploaded to Github
 
-# V-1.10: (4-12-24)
+# V-1.1.0: (4-12-24)
 Users can now only input one flower per session <br>
 Added more comments explaining the logic and code
 
-# V-1.20: (4-17-24)
+# V-1.2.0: (4-17-24)
 Formatted the confidence to come out as a percentage <br>
 Added more comments explaining the logic and code <br>
 Created a PowerPoint that briefly explains the program
 
-# V-1.21: (7-23-24)
+# V-1.2.1: (7-23-24)
 Fixed a minor error that displayed a successful addition to csv file, even if addition to the file failed <br> 
 
-# Current Features as of V-1.21:
+# Current Features as of V-1.2.1:
 - Takes 4 variable values from the user about an Iris flower type 
 - Uses the data from the famous Iris flower dataset to predict the likeihood of what type of flower the user may have
 - Provides an accurate prediction of the user's flower type
