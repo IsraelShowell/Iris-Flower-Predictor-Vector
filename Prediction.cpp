@@ -401,7 +401,11 @@ void Flower::senddata(string userarr[], int& records) {
 
     if (!numberofrecords.is_open() || !irisdataset.is_open()) {
         cout << "We ran into an error opening one of the files!" << endl;
+        cout << "Flower was NOT added to the dataset!" << endl;
         return;
+    }
+    else {
+        cout << "Flower was successfully added to the dataset!" << endl;
     }
 
     //Loops through the array to add each value

@@ -17,7 +17,7 @@ type it is most sure that it is.
 This program uses Naïve Bayes and Statistical Modeling to make its predictions.
 
 NOTE:
-This is the a newer version of the first code I made. This one uses vectors to increase readability.
+This is the newer version of the first code I made. This one uses vectors to increase readability.
 */
 
 
@@ -72,7 +72,7 @@ int main()
     
 
 //MENU:  do {
-    //Calls the gatherdata member function and passese the proper values
+    //Calls the gatherdata member function and passes the proper parameters
     Flower1.gatherdata(datasetinfo, numberoftype_Set, numberoftype_Ver, numberoftype_Vir, records);
     choice = 0;
 
@@ -96,7 +96,7 @@ int main()
         string userarr[5];
         Flower1.gatherinput(input, userarr);
        
-        //Setosa Values running
+        //Setosa values being calculated
         Flower1.samplemean(datasetinfo, iris_s, numberoftype_Set, records, input); 
         Flower1.samplevariance(datasetinfo, iris_s, numberoftype_Set, records, input);
         Flower1.standarddeviation(input);
@@ -112,7 +112,7 @@ int main()
             input[i].clear();
         }
 
-        //Versicolor Values running
+        //Versicolor values being calculated
         Flower1.samplemean(datasetinfo, iris_ver, numberoftype_Ver, records, input);
         Flower1.samplevariance(datasetinfo, iris_ver, numberoftype_Ver, records, input);
         Flower1.standarddeviation(input);
@@ -129,7 +129,7 @@ int main()
         }
 
 
-        //Virginica Values running
+        //Virginica values being calculated
         Flower1.samplemean(datasetinfo, iris_vir, numberoftype_Vir, records, input);
         Flower1.samplevariance(datasetinfo, iris_vir, numberoftype_Ver, records, input);
         Flower1.standarddeviation(input);
@@ -212,7 +212,6 @@ int main()
         if (choice2 == 1) {
             
             Flower1.senddata(userarr,records);
-            cout << "Flower was successfully added to the dataset!" << endl;
 
             //This was used to support adding multiple flowers in one session, however I removed that functionality for now
             datasetinfo.erase(datasetinfo.begin() + 1, datasetinfo.end());
@@ -226,7 +225,7 @@ int main()
             datasetinfo[0].clear();
         }
     }
-    cout << "Program End" << endl;
+    cout << "The program has ended! Please rerun it to predict a new flower!" << endl;
 system("PAUSE");
 }
 
