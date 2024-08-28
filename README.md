@@ -63,6 +63,6 @@ Fixed a minor error that displayed a successful addition to csv file, even if ad
 - Implement a cleaner UI
 
 
-# Known Bugs in V-1.20:
+# Known Bugs in V-1.2.1:
 - Error is suffered when trying to input two flowers in one session.
 - Number of iris flowers becomes incorrect when trying to input two flowers in one session.
